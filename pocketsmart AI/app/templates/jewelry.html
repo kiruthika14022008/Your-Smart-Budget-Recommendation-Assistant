@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="planner">
+
+    <div class="section-head">
+
+        <div>
+
+            <p class="eyebrow">
+                PLANNER 03
+            </p>
+
+            <h1>
+                Jewelry Match
+            </h1>
+
+            <p>
+                Add outfit information or upload
+                an optional image for AI-assisted
+                style coordination.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <form
+        id="jewelryForm"
+        class="card formgrid"
+        enctype="multipart/form-data"
+    >
+
+        <label>
+
+            Budget ₹
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+                placeholder="Example: 25000"
+            >
+
+        </label>
+
+
+        <label>
+
+            Occasion
+
+            <select name="occasion">
+
+                <option>
+                    Wedding
+                </option>
+
+                <option>
+                    Party
+                </option>
+
+                <option>
+                    Office
+                </option>
+
+                <option>
+                    Festive
+                </option>
+
+                <option>
+                    Date
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <select name="style">
+
+                <option>
+                    Elegant
+                </option>
+
+                <option>
+                    Minimal
+                </option>
+
+                <option>
+                    Traditional
+                </option>
+
+                <option>
+                    Statement
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Outfit Color
+
+            <input
+                name="outfit_color"
+                placeholder="Example: Emerald green"
+            >
+
+        </label>
+
+
+        <label>
+
+            Outfit Description
+
+            <textarea
+                name="outfit_description"
+                placeholder="Describe the outfit..."
+            ></textarea>
+
+        </label>
+
+
+        <label>
+
+            Outfit Image
+
+            <input
+                name="outfit_image"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+            >
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate Recommendations
+        </button>
+
+    </form>
+
+
+    <div id="results"></div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="planner">
+
+    <div class="section-head">
+
+        <div>
+
+            <p class="eyebrow">
+                PLANNER 01
+            </p>
+
+            <h1>
+                Home Interior
+            </h1>
+
+            <p>
+                Allocate your budget across
+                rooms and home essentials.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <form
+        id="homeForm"
+        class="card formgrid"
+    >
+
+        <label>
+
+            Budget ₹
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+                placeholder="Example: 100000"
+            >
+
+        </label>
+
+
+        <label>
+
+            Style
+
+            <select name="style">
+
+                <option>
+                    Modern
+                </option>
+
+                <option>
+                    Minimal
+                </option>
+
+                <option>
+                    Traditional
+                </option>
+
+                <option>
+                    Bohemian
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Rooms
+
+            <input
+                name="rooms"
+                placeholder="Living Room, Bedroom, Kitchen"
+            >
+
+        </label>
+
+
+        <label>
+
+            Items
+
+            <input
+                name="items"
+                placeholder="Sofa, lights, dining table"
+            >
+
+        </label>
+
+
+        <label>
+
+            City
+
+            <input
+                name="city"
+                value="Chennai"
+            >
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate Recommendations
+        </button>
+
+    </form>
+
+
+    <div id="results"></div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="planner">
+
+    <div class="section-head">
+
+        <div>
+
+            <p class="eyebrow">
+                PLANNER 02
+            </p>
+
+            <h1>
+                Party Budget
+            </h1>
+
+            <p>
+                Plan food, venue and decoration
+                around your guest count.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <form
+        id="partyForm"
+        class="card formgrid"
+    >
+
+        <label>
+
+            Budget ₹
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+                placeholder="Example: 50000"
+            >
+
+        </label>
+
+
+        <label>
+
+            Number of Guests
+
+            <input
+                name="guests"
+                type="number"
+                min="1"
+                required
+                placeholder="Example: 50"
+            >
+
+        </label>
+
+
+        <label>
+
+            Event Type
+
+            <select name="event_type">
+
+                <option>
+                    Birthday
+                </option>
+
+                <option>
+                    Wedding
+                </option>
+
+                <option>
+                    Corporate
+                </option>
+
+                <option>
+                    Anniversary
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Venue
+
+            <select name="venue">
+
+                <option>
+                    Home
+                </option>
+
+                <option>
+                    Hotel
+                </option>
+
+                <option>
+                    Restaurant
+                </option>
+
+                <option>
+                    Outdoor
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            City
+
+            <input
+                name="city"
+                value="Chennai"
+            >
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate Recommendations
+        </button>
+
+    </form>
+
+
+    <div id="results"></div>
+
+</section>
+
+{% endblock %}

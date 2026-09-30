@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+
+    <div class="section-head">
+
+        <div>
+
+            <p class="eyebrow">
+                YOUR SPACE
+            </p>
+
+            <h1>
+                Dashboard
+            </h1>
+
+        </div>
+
+        <button
+            class="btn ghost"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+    </div>
+
+
+    <div
+        id="profile"
+        class="card"
+    >
+    </div>
+
+
+    <h2>
+        Recommendation History
+    </h2>
+
+
+    <div
+        id="history"
+        class="grid"
+    >
+    </div>
+
+</section>
+
+{% endblock %}
